@@ -13,14 +13,26 @@ variable "instance_type" {
   type        = string
   default     = "t2.micro"
 }
-
+/*
 variable "region" {
   description = "The AWS region to deploy the application"
   type        = string
   default     = "us-east-1"
 }
-
+*/
 variable "version_label" {
   description = "The version label for the application"
   type        = string
+}
+/*
+variable "bucket_name" {
+  description = "The Name of the S3 bucket"
+  type        = string
+  default     = "my-eb-app-bucket-moses"
+}
+*/
+variable "source_zip" {
+  description = "The local path to the app Zip file"
+  type        = string
+  default     = "app.zip"
 }
