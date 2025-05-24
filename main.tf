@@ -7,11 +7,13 @@ resource "aws_s3_bucket" "app_bucket" {
   bucket = "my-eb-app-bucket-moses2025"
   force_destroy = true
 }
-
+/*
 resource "aws_s3_bucket_acl" "app_bucket_acl" {
   bucket = aws_s3_bucket.app_bucket.id
   acl = "private"
 }
+*/
+
 /*
 resource "aws_s3_bucket_object" "app_zip" {
   bucket = aws_s3_bucket.app_bucket.bucket
@@ -37,7 +39,7 @@ resource "aws_elastic_beanstalk_environment" "env" {
   name                = var.environment_name
   application         = aws_elastic_beanstalk_application.app.name
   #platform_arn        = "arn:aws:elasticbeanstalk:us-east-1::platform/Python 3.8 running on 64bit Amazon Linux 2/5.4.0"
-  solution_stack_name = "64bit Amazon Linux 2 v5.4.0 running Python 3.8"
+  solution_stack_name = "64bit Amazon Linux 2 v3.5.1 running Python 3.8"
   setting {
     namespace = "aws:elasticbeanstalk:application:environment"
     name      = "PYTHONPATH"
