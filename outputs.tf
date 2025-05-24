@@ -1,5 +1,5 @@
 output "application_url" {
-  value = "http://${aws_elastic_beanstalk_environment.my_app.endpoint}"
+  value = "http://${aws_elastic_beanstalk_environment.env.endpoint_url}"
 }
 
 output "application_name" {
