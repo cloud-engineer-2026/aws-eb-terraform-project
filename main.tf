@@ -39,7 +39,7 @@ resource "aws_elastic_beanstalk_environment" "env" {
   name                = var.environment_name
   application         = aws_elastic_beanstalk_application.app.name
   #platform_arn        = "arn:aws:elasticbeanstalk:us-east-1::platform/Python 3.8 running on 64bit Amazon Linux 2/5.4.0"
-  solution_stack_name = "64bit Amazon Linux 2 v5.8.4 running Python 3.11"
+  solution_stack_name = "64bit Amazon Linux 2023 v4.5.2 running Python 3.13"
   setting {
     namespace = "aws:elasticbeanstalk:application:environment"
     name      = "PYTHONPATH"
