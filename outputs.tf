@@ -7,5 +7,5 @@ output "application_name" {
 }
 
 output "environment_name" {
-  value = aws_elastic_beanstalk_environment.app.name
+  value = aws_elastic_beanstalk_environment.env.name
 }
